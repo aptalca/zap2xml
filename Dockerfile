@@ -5,6 +5,7 @@ MAINTAINER aptalca
 RUN \
  apt-get update && \
  apt-get install -y \
+ 	cron \
 	libcompress-raw-zlib-perl \
 	libhtml-parser-perl \
 	libhttp-cookies-perl \

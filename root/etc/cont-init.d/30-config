@@ -24,6 +24,7 @@ chmod +x \
 
 # run initial retrieval
 cd /config
+sleep 2
 exec \
 	s6-setuidgid abc /app/zap2xml.sh
 

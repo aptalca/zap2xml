@@ -1,4 +1,4 @@
-FROM lsiobase/xenial
+FROM lsiobase/alpine:3.6
 MAINTAINER aptalca
 
 # environment settings
@@ -6,20 +6,20 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
 # install packages
 RUN \
- apt-get update && \
- apt-get install -y \
- 	cron \
-	libcompress-raw-zlib-perl \
-	libhtml-parser-perl \
-	libhttp-cookies-perl \
-	liblwpx-paranoidagent-perl \
-	libconfig-json-perl \
-	libjson-xs-perl \
+ apk add --no-cache \
+ 	nano \
+	perl-compress-raw-zlib \
+	perl-html-parser \
+	perl-http-cookies \
+	perl-lwp-useragent-determined \
+	perl-json-maybexs \
 	wget && \
-
- apt-get clean && \
- rm -rf \
-	/tmp/*
+ apk add --no-cache \
+ 	--repository http://nl.alpinelinux.org/alpine/edge/main \
+	perl-json && \
+ apk add --no-cache \
+ 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	perl-json-xs
 
 # copy local files
 COPY root/ /

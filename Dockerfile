@@ -2,7 +2,7 @@ FROM lsiobase/alpine:3.6
 MAINTAINER aptalca
 
 # environment settings
-#ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
+ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
 # install packages
 RUN \

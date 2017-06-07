@@ -20,10 +20,6 @@ RUN \
  apt-get clean && \
  rm -rf \
 	/tmp/*
-##DO STUFF HERE
-## END EACH LINE WITH && \
-## EXCEPT THE LAST LINE OF THE BLOCK
-
 
 # copy local files
 COPY root/ /

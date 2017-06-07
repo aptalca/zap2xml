@@ -24,11 +24,12 @@ Our Plex container has immaculate docs so follow that if in doubt for layout.
 
 ```
 docker create \
-  --name=<container-name> \
+  --name=zap \
   -v <path to data>:/config \
   -e PGID=<gid> -e PUID=<uid>  \
-  -p 1234:1234 \
-  <image-name>
+  -e EMAIL=<email> \
+  -e PASSWORD=<password>
+  aptalca/zap2xml
 ```
 
 ## Parameters

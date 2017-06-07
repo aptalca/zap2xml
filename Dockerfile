@@ -14,7 +14,9 @@ RUN \
 	perl-lwp-useragent-determined \
 	perl-json \
 	perl-json-maybexs \
-	wget
+	wget && \
+	
+ ln -s ./Cpanel/JSON /usr/lib/perl5/vendor_perl/JSON
 
 # copy local files
 COPY root/ /

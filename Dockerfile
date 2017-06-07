@@ -15,6 +15,9 @@ RUN \
 	perl-json-maybexs \
 	wget && \
  apk add --no-cache \
+ 	--repository http://nl.alpinelinux.org/alpine/edge/main \
+	perl-json && \
+ apk add --no-cache \
  	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	perl-json-xs
 

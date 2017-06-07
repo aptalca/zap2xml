@@ -12,11 +12,11 @@ RUN \
 	perl-html-parser \
 	perl-http-cookies \
 	perl-lwp-useragent-determined \
-	perl-json \
 	perl-json-maybexs \
 	wget && \
-	
- ln -s ./Cpanel/JSON /usr/lib/perl5/vendor_perl/JSON
+ apk add --no-cache \
+ 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	perl-json-xs
 
 # copy local files
 COPY root/ /

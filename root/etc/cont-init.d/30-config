@@ -1,10 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-#Check zap2xml script
+# check zap2xml script
 [[ ! -f /config/zap2xml.pl ]] && \
 	echo "copy script into the config folder and restart the container" && \
 	exit 1
 
+# check variables
 if [ -z "$EMAIL" ] || [ -z "$PASSWORD" ]; then
 	echo "Please pass your EMAIL and PASSWORD as environment variables in your docker run command. See docker info for more details."
 	exit 1
@@ -13,12 +14,16 @@ else
   echo -e "EMAIL=$EMAIL PASSWORD=$PASSWORD" > /app/zap2xml.conf
 fi
 
+# set permissions
 chown -R abc:abc \
 	/app \
 	/config
-chmod +x /app/zap2xml.sh
+chmod +x \
+	/app/zap2xml.sh \
+	/config/zap2xml.pl
 
 # run initial retrieval
+cd /config
 exec \
 	s6-setuidgid abc /app/zap2xml.sh
 

@@ -11,7 +11,7 @@ if [ -z "$EMAIL" ] || [ -z "$PASSWORD" ]; then
 	exit 1
 else
   echo "Retrieving email and password from the environment variables"
-  echo -e "EMAIL=$EMAIL PASSWORD=$PASSWORD EXTRAPARAM=$EXTRAPARAM" > /app/zap2xml.conf
+  echo -e "EMAIL=\"$EMAIL\" PASSWORD=\"$PASSWORD\" EXTRAPARAM=\"$EXTRAPARAM\"" > /app/zap2xml.conf
 fi
 
 # set permissions

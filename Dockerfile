@@ -8,15 +8,17 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 RUN \
  apk add --no-cache \
  	nano \
-	perl-compress-raw-zlib \
-	perl-html-parser \
-	perl-http-cookies \
-	perl-lwp-useragent-determined \
-	perl-json-maybexs \
 	wget && \
  apk add --no-cache \
  	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	perl-json && \
+	perl-compress-raw-zlib \
+	perl-html-parser \
+	perl-http-cookies \
+	perl-json \
+	perl-lwp-useragent-determined && \
+ apk add --no-cache \
+ 	--repository http://nl.alpinelinux.org/alpine/edge/community \
+	perl-json-maybexs && \
  apk add --no-cache \
  	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	perl-json-xs

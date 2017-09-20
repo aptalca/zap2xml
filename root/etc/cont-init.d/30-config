@@ -32,4 +32,3 @@ sleep 2
 echo "Initial run of zap2xml in progress, check the logs at /config/log/zap2xml/zap2xml.log $(date)"
 exec \
 	s6-setuidgid abc /app/zap2xml.sh >> /config/log/zap2xml/zap2xml.log 2>&1
-echo "Initial run completed $(date)"

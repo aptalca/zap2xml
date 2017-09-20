@@ -1,1 +1,1 @@
-3  */8  * * *   /app/zap2xml.sh >> /config/zap2xml.log 2>&1
+3  */8  * * *   /app/zap2xml.sh >> /config/log/zap2xml/zap2xml.log 2>&1

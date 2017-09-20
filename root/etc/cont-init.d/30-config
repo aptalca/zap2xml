@@ -1,5 +1,9 @@
 #!/usr/bin/with-contenv bash
 
+# create folders
+mkdir -p \
+	/config/log/zap2xml
+
 # check zap2xml script
 [[ ! -f /config/zap2xml.pl ]] && \
 	echo "copy script into the config folder and restart the container" && \
@@ -25,6 +29,7 @@ chmod +x \
 # run initial retrieval
 cd /config
 sleep 2
+echo "Initial run of zap2xml in progress, check the logs at /config/log/zap2xml/zap2xml.log $(date)"
 exec \
-	s6-setuidgid abc /app/zap2xml.sh
-
+	s6-setuidgid abc /app/zap2xml.sh >> /config/log/zap2xml/zap2xml.log 2>&1
+echo "Initial run completed $(date)"

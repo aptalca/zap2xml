@@ -22,7 +22,10 @@ RUN \
 	perl-json-maybexs && \
  apk add --no-cache \
  	--repository http://nl.alpinelinux.org/alpine/edge/testing \
-	perl-json-xs
+	perl-json-xs && \
+
+# fix logrotate
+ sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
 
 # copy local files
 COPY root/ /

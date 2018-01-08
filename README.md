@@ -16,4 +16,4 @@ docker create \
   
 - Drop the zap2xml perl script into the config folder and restart
 - Extra parameters can be anything that zap2xml accepts
-- Use the image tag `ubuntu` for the ubuntu image and `alpine` for the alpine image. `latest` defaults to alpine. Alpine image is much more compact.
+- For tvguide instead of zap2it, add a "-z" into the extra parameters

@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.6
+FROM lsiobase/alpine:3.7
 MAINTAINER aptalca
 
 # environment settings
@@ -9,17 +9,14 @@ RUN \
  apk add --no-cache \
  	logrotate \
 	nano \
-	wget && \
- apk add --no-cache \
- 	--repository http://nl.alpinelinux.org/alpine/edge/main \
 	perl-compress-raw-zlib \
+	perl-gd \
 	perl-html-parser \
 	perl-http-cookies \
 	perl-json \
-	perl-lwp-useragent-determined && \
- apk add --no-cache \
- 	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	perl-json-maybexs && \
+	perl-json-maybexs \
+	perl-lwp-useragent-determined \
+	wget && \
  apk add --no-cache \
  	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	perl-json-xs && \

@@ -10,6 +10,7 @@ RUN \
  	logrotate \
 	nano \
 	perl-compress-raw-zlib \
+	perl-gd \
 	perl-html-parser \
 	perl-http-cookies \
 	perl-json \

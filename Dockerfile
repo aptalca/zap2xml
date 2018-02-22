@@ -15,6 +15,7 @@ RUN \
 	perl-http-cookies \
 	perl-json \
 	perl-json-maybexs \
+	perl-lwp-protocol-https \
 	perl-lwp-useragent-determined \
 	wget && \
  apk add --no-cache \

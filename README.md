@@ -11,7 +11,7 @@ docker create \
   -e EMAIL=<email> \
   -e PASSWORD=<password> \
   -e EXTRAPARAM="<extra parameters for zap2xml>" \
-  aptalca/zap2xml:<tag>
+  aptalca/zap2xml
   ```
   
 - Drop the zap2xml perl script into the config folder and restart

@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.9
+FROM lsiobase/alpine.arm64:3.9
 MAINTAINER aptalca
 
 # environment settings
@@ -30,4 +30,3 @@ COPY root/ /
 
 # ports and volumes
 VOLUME /config
-

@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM lsiobase/alpine:3.9
 MAINTAINER aptalca
 
 # environment settings

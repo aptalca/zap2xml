@@ -81,7 +81,7 @@ steps:
   settings:
     auto_tag: true
     auto_tag_suffix: linux-arm
-    dockerfile: Dockerfile.arm
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml
@@ -102,7 +102,7 @@ steps:
   settings:
     tags:
     - linux-arm-pr
-    dockerfile: Dockerfile.arm
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml
@@ -120,7 +120,7 @@ steps:
   settings:
     tags:
     - linux-arm-dev
-    dockerfile: Dockerfile.arm
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml
@@ -150,7 +150,7 @@ steps:
   settings:
     auto_tag: true
     auto_tag_suffix: linux-arm64
-    dockerfile: Dockerfile.aarch64
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml
@@ -171,7 +171,7 @@ steps:
   settings:
     tags:
     - linux-arm64-pr
-    dockerfile: Dockerfile.aarch64
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml
@@ -189,7 +189,7 @@ steps:
   settings:
     tags:
     - linux-arm64-dev
-    dockerfile: Dockerfile.aarch64
+    dockerfile: Dockerfile
     password:
       from_secret: docker_password
     repo: aptalca/zap2xml

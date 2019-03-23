@@ -19,6 +19,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
     - master
     event:
@@ -37,6 +40,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     event:
     - pull_request
 
@@ -52,6 +58,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
       exclude:
       - master
@@ -79,6 +88,11 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
+    branch:
+    - master
     event:
     - push
     - tag
@@ -95,6 +109,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     event:
     - pull_request
 
@@ -110,6 +127,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
       exclude:
       - master
@@ -137,6 +157,11 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
+    branch:
+    - master
     event:
     - push
     - tag
@@ -153,6 +178,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     event:
     - pull_request
 
@@ -168,6 +196,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
       exclude:
       - master
@@ -194,6 +225,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
     - master
     event:
@@ -225,6 +259,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     event:
     - pull_request
 
@@ -253,6 +290,9 @@ steps:
     username:
       from_secret: docker_username
   when:
+    ref:
+    include:
+    - refs/heads/*
     branch:
       exclude:
       - master

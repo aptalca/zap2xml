@@ -31,8 +31,8 @@ steps:
 - name: publish-pr
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-amd64-pr
+    tags:
+    - linux-amd64-pr
     dockerfile: Dockerfile
     password:
       from_secret: docker_password
@@ -49,8 +49,8 @@ steps:
 - name: publish-branch
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-amd64-dev
+    tags:
+    - linux-amd64-dev
     dockerfile: Dockerfile
     password:
       from_secret: docker_password
@@ -100,8 +100,8 @@ steps:
 - name: publish-pr
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-arm-pr
+    tags:
+    - linux-arm-pr
     dockerfile: Dockerfile.arm
     password:
       from_secret: docker_password
@@ -118,8 +118,8 @@ steps:
 - name: publish-branch
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-arm-dev
+    tags:
+    - linux-arm-dev
     dockerfile: Dockerfile.arm
     password:
       from_secret: docker_password
@@ -169,8 +169,8 @@ steps:
 - name: publish-pr
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-arm64-pr
+    tags:
+    - linux-arm64-pr
     dockerfile: Dockerfile.aarch64
     password:
       from_secret: docker_password
@@ -187,8 +187,8 @@ steps:
 - name: publish-branch
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: linux-arm64-dev
+    tags:
+    - linux-arm64-dev
     dockerfile: Dockerfile.aarch64
     password:
       from_secret: docker_password
@@ -251,7 +251,6 @@ steps:
 - name: server
   image: plugins/manifest
   settings:
-    auto_tag: true
     ignore_missing: true
     password:
       from_secret: docker_password
@@ -282,7 +281,6 @@ steps:
 - name: server
   image: plugins/manifest
   settings:
-    auto_tag: true
     ignore_missing: true
     password:
       from_secret: docker_password

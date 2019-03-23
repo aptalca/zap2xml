@@ -1,0 +1,19 @@
+image: aptalca/zap2xml:pr
+manifests:
+  -
+    image: aptalca/zap2xml:linux-amd64-pr
+    platform:
+      architecture: amd64
+      os: linux
+  -
+    image: aptalca/zap2xml:linux-arm64-pr
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
+  -
+    image: aptalca/zap2xml:linux-arm-pr
+    platform:
+      architecture: arm
+      os: linux
+      variant: v7

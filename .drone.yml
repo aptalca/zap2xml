@@ -34,6 +34,7 @@ steps:
     repo: aptalca/zap2xml
     username:
       from_secret: docker_username
+    dry_run: true
   when:
     ref:
     include:
@@ -98,6 +99,7 @@ steps:
     repo: aptalca/zap2xml
     username:
       from_secret: docker_username
+    dry_run: true
   when:
     ref:
     include:
@@ -162,6 +164,7 @@ steps:
     repo: aptalca/zap2xml
     username:
       from_secret: docker_username
+    dry_run: true
   when:
     ref:
     include:
@@ -213,36 +216,6 @@ steps:
     event:
     - push
     - tag
-
-depends_on:
-- linux-amd64
-- linux-arm
-- linux-arm64
-
----
-kind: pipeline
-name: manifest-pr
-
-platform:
-  os: linux
-  arch: amd64
-
-steps:
-- name: server
-  image: plugins/manifest
-  settings:
-    ignore_missing: true
-    password:
-      from_secret: docker_password
-    spec: manifest-pr.tmpl
-    username:
-      from_secret: docker_username
-  when:
-    ref:
-    include:
-    - refs/heads/*
-    event:
-    - pull_request
 
 depends_on:
 - linux-amd64

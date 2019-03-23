@@ -85,7 +85,7 @@ steps:
   when:
     event:
     - push
-    -tag
+    - tag
 
 - name: publish-pr
   image: plugins/docker

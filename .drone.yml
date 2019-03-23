@@ -89,7 +89,7 @@ steps:
     - master
     event:
     - push
-    - tag
+    -tag
 
 - name: publish-pr
   image: plugins/docker
@@ -216,8 +216,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    branch:
-    - master
     event:
     - push
     - tag

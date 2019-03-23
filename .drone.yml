@@ -19,9 +19,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    ref:
-    include:
-    - refs/heads/*
     branch:
     - master
     event:
@@ -88,9 +85,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    ref:
-    include:
-    - refs/heads/*
     branch:
     - master
     event:
@@ -157,9 +151,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    ref:
-    include:
-    - refs/heads/*
     branch:
     - master
     event:
@@ -225,9 +216,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    ref:
-    include:
-    - refs/heads/*
     branch:
     - master
     event:

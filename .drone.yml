@@ -19,8 +19,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    branch:
-    - master
     event:
     - push
     - tag
@@ -85,8 +83,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    branch:
-    - master
     event:
     - push
     -tag
@@ -151,8 +147,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    branch:
-    - master
     event:
     - push
     - tag
